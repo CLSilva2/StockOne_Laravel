@@ -19,7 +19,7 @@
                         <th class="px-6 py-3">Item</th>
                         <th class="px-6 py-3">Quantidade</th>
                         <th class="px-6 py-3">Valor</th>
-                        <th class="px-6 py-3 text-right">Ações</th>
+                        <th class="px-6 py-3 text-right"></th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">
@@ -30,14 +30,7 @@
                             <td class="px-6 py-4 text-gray-600">{{ $item->quantidade }}</td>
                             <td class="px-6 py-4 text-gray-900 font-semibold">R$ {{ number_format($item->preco_unitario, 2, ',', '.') }}</td>
                             <td class="px-6 py-4 text-right">
-                                <div class="flex items-center justify-end gap-2">
-                                    <a href="{{ route('pedido-itens.edit', $item) }}" class="text-sm font-semibold text-red-600 hover:text-red-800">Editar</a>
-                                    <form action="{{ route('pedido-itens.destroy', $item) }}" method="POST" data-confirm="Remover este item?">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="text-sm text-gray-500 hover:text-red-700">Excluir</button>
-                                    </form>
-                                </div>
+                               
                             </td>
                         </tr>
                     @empty
