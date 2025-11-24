@@ -4,9 +4,7 @@
 @section('subtitle', 'Detalhe cada item produzido')
 
 @section('actions')
-    <a href="{{ route('pedido-itens.create') }}" class="rounded-full bg-red-600 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-red-500">
-        Novo item
-    </a>
+   
 @endsection
 
 @section('content')
